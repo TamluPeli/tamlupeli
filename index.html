@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Annoying Website</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+        .video-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        .content {
+            position: relative;
+            z-index: 1;
+            color: white;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        .play-button {
+            background-color: purple;
+            color: white;
+            border: 2px solid white;
+            padding: 10px 20px;
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .play-button:hover {
+            background-color: white;
+            color: purple;
+            border-color: purple;
+        }
+
+        body {
+            cursor: url('https://www.example.com/annoying-cursor.png'), auto;
+        }
+        .random-text {
+            position: absolute;
+            font-size: 20px;
+            color: red;
+            font-weight: bold;
+        }
+
+        .image-container {
+            position: absolute;
+            top: 30%; 
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: none; 
+            text-align: center; 
+        }
+        .image-container img {
+            max-width: 300px; 
+            height: auto;
+        }
+
+        .image-container a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: purple;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        .image-container a:hover {
+            background-color: white;
+            color: purple;
+            border: 2px solid purple;
+        }
+    </style>
+</head>
+<body>
+    <!-- Video Background -->
+    <video id="bg-video" class="video-bg" loop playsinline>
+        <source src="hehe.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Image Container (hidden initially) -->
+    <div class="image-container" id="image-container">
+        <img src="nieche.png" alt="Niche Image" />
+        <!-- Link under the image -->
+        <a href="https://discord.gg/2jDsvkCYAa" target="_blank">Tamlucord paina täst</a>
+    </div>
+
+    <!-- Styled Button -->
+    <div class="content" id="content">
+        <button class="play-button" onclick="enterFullscreen()">Enter</button>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        function enterFullscreen() {
+            const video = document.getElementById('bg-video');
+            video.play();
+
+            const element = document.documentElement; 
+            requestFullscreen(element);
+
+            const content = document.getElementById('content');
+            content.style.display = 'none';
+
+            const imageContainer = document.getElementById('image-container');
+            imageContainer.style.display = 'block';
+
+            startAnnoying();
+        }
+
+        function requestFullscreen(element) {
+            if (element.requestFullscreen) {
+                element.requestFullscreen();
+            } else if (element.webkitRequestFullscreen) { 
+                element.webkitRequestFullscreen();
+            } else if (element.msRequestFullscreen) { 
+                element.msRequestFullscreen();
+            }
+        }
+
+        function startAnnoying() {
+
+            window.onbeforeunload = function() {
+                return "Are you sure you want to leave this page?";
+            };
+
+            openMultipleTabs();
+
+            setInterval(() => {
+                console.log('Attempting to print!');
+                window.print();
+            }, 3000);  
+
+            requestPermissions();
+
+            randomAlerts();
+
+            fakePopup();
+
+            randomTextPopups();
+        }
+
+        function requestPermissions() {
+
+            navigator.mediaDevices.getUserMedia({ audio: true })
+                .then((stream) => {
+                    console.log("Microphone access granted.");
+                    stream.getTracks().forEach(track => track.stop());
+                })
+                .catch((err) => {
+                    console.log("Microphone access denied:", err);
+                });
+
+            navigator.mediaDevices.getUserMedia({ video: true })
+                .then((stream) => {
+                    console.log("Camera access granted.");
+                    stream.getTracks().forEach(track => track.stop());
+                })
+                .catch((err) => {
+                    console.log("Camera access denied:", err);
+                });
+
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(
+                    (position) => {
+                        console.log("Location access granted: ", position);
+                    },
+                    (error) => {
+                        console.log("Location access denied: ", error);
+                    }
+                );
+            }
+        }
+
+        function openMultipleTabs() {
+            const numTabs = 5; 
+            for (let i = 0; i < numTabs; i++) {
+                window.open('homostelu.info', '_blank');  
+            }
+        }
+
+        document.addEventListener('contextmenu', function(event) {
+            event.preventDefault();
+            alert('Right-click is disabled!');
+        });
+
+        document.addEventListener('keydown', function(event) {
+
+            if (event.ctrlKey && event.shiftKey && event.key === 'I') {
+                event.preventDefault();
+                alert('You thought skid');
+            }
+
+            if (event.ctrlKey && (event.key === 'p' || event.key === 's')) {
+                event.preventDefault();
+                alert('Keyboard shortcuts are disabled!');
+            }
+
+            if (event.key === 'Tab') {
+                event.preventDefault();
+                alert('No tabbing allowed!');
+            }
+
+            if (event.key === 'Escape') {
+                event.preventDefault();
+                alert('Escape is disabled!');
+            }
+
+            if (event.key === 'ArrowUp' || event.key === 'ArrowDown' || event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
+                event.preventDefault();
+                alert('Arrow keys are disabled!');
+            }
+        });
+
+        function fakePopup() {
+            setInterval(() => {
+                alert('This is a fake pop-up you can\'t close!');
+            }, 5000);  
+        }
+
+        function randomTextPopups() {
+            const texts = ["Hello!", "I like your style!", "Try again!", "Why are you still clicking?", "Good luck!"];
+            setInterval(() => {
+                const text = texts[Math.floor(Math.random() * texts.length)];
+                const randomX = Math.floor(Math.random() * window.innerWidth);
+                const randomY = Math.floor(Math.random() * window.innerHeight);
+
+                const div = document.createElement('div');
+                div.classList.add('random-text');
+                div.style.left = randomX + 'px';
+                div.style.top = randomY + 'px';
+                div.textContent = text;
+                document.body.appendChild(div);
+
+                setTimeout(() => {
+                    div.remove();
+                }, 2000);  
+            }, 3000);  
+        }
+
+        function randomAlerts() {
+            const messages = [
+                "I'm watching you.",
+                "Why are you still here?",
+                "You thought skid.",
+                "Bored yet?",
+                "Are you sure you want to leave?",
+            ];
+            setInterval(() => {
+                alert(messages[Math.floor(Math.random() * messages.length)]);
+            }, 3000);  
+        }
+    </script>
+</body>
+</html>
