@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sivut korjattu</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #0f0f0f, #6a0dad);
+            color: #f5f5f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+            text-align: center;
+            max-width: 700px;
+            width: 90%;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            background: linear-gradient(90deg, #d4a5ff, #ff6bd4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin: 10px 0;
+        }
+
+        .highlight {
+            color: #ff6bd4;
+            font-weight: bold;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 24px;
+            font-size: 1rem;
+            color: #fff;
+            text-decoration: none;
+            background: linear-gradient(90deg, #8a2be2, #ff6bd4);
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(138, 43, 226, 0.6);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        a:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(138, 43, 226, 0.8);
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            margin: 20px 0 10px;
+            color: #ffc371;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Moix!</h1>
+
+        <p>Joku "<span class="highlight">mixxerix</span>" niminen kaveri kävi "häckeröimässä" TamLuPelin Jodelin mukaan. En voi itse varmistaa asiaa, koska hyökkääjä käytti vpn:nää joka osoittaa turkkiin:D Mutta kumminkin vissiin pääjehuja näissä Tamlupiireissä sillä omistaa kuulemma Tamlundiscordin vaikka on 25-vuotias yliabi.</p>
+        <p>Tamludiscordi: <a href="https://discord.gg/2jDsvkCYAa" target="_blank" rel="noopener noreferrer">https://discord.gg/2jDsvkCYAa</a></p>
+
+        <div class="section-title"><h1>Mitä tapahtui?</h1></div>
+        <p><p>
+            Hyökkääjä onnistui arvaamaan ihanan sivuni salasanat ja kävi lisäämässä tänne kaikenlaista ei-niin-ihanaa sisältöä! 😬 Olen todella pahoillani jos jouduit todistamaan niitä taideteoksia.
+            Mutta ei hätää! Aion panostaa tulevaisuudessa nettiturvallisuuteen kunnolla, ehkäpä teen salasanat jopa keypassilla xD
+            En ole mikään ohjelmointiguru, ja tämä projekti syntyi vahinkolapsena kesken koeviikon, joten turvallisuus jäi vähän... noh, "sivurooliin". Mutta parannuksia tulossa!
+        </p>
+        </p>
+
+        <div class="section-title"><h1>Paskapippeli pää hackeri pihalla</h1></div>
+        <p>
+            Tili on nyt taas hallinnassani, sillä sain "hackerin" pihalle ihan nerokkaalla ratkaisulla – vaihdoin salasanani! 😎🍺
+        </p>
+
+        <div class="section-title"> <h1>tulevaisuus</h1> </div>
+        <p>
+            <span class="highlight">Tamlupeli</span> tullaan lisäämään takaisin lähitulevaisuudessa! Siinä tosin voi kestää hetki, koska minulla ei enää ole <span class="highlight">tamlupelin</span> lähdekoodia. Miksi? No, ylläpidin sitä sellaisessa "hackeriproo" sovelluksessa kuin "Github", jonka jouduin poistamaan, koska hyökkääjä päätti koristella sen töhryillään kuin tamlun nistivessan. 😅        </p>
+
+        <a href="#">RiP TamluPeli 2024-2024</a>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <script>
+
+        function launchConfetti() {
+            confetti({
+                particleCount: 150,
+                spread: 200,
+                startVelocity: 100,
+                origin: { y: 0.6 }
+            });
+        }
+
+        
+        window.onload = launchConfetti;
+    </script>
+</body>
+</html>
